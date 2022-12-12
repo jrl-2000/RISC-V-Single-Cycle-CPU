@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_2.gen/sources_1/ip/clk_wiz_0_1" \
+"../../../../project_2.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_clk_wiz.v" \
+"../../../../project_2.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v" \
+"../../../../project_2.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../../Documents/ECE505F22/demoModule/ALU.v" \
+"../../../../../Documents/ECE505F22/demoModule/alu_control.v" \
+"../../../../../Documents/ECE505F22/demoModule/control_unit.v" \
+"../../../../../Documents/ECE505F22/demoModule/imm_gen.v" \
+"../../../../../Documents/ECE505F22/demoModule/lab505.v" \
+"../../../../../Documents/ECE505F22/demoModule/reg_file.v" \
+"../../../../../Documents/ECE505F22/demoModule/reg_rom.v" \
+"../../../../../Documents/ECE505F22/tb/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
