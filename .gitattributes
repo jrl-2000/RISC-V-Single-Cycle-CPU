@@ -1,1 +1,1 @@
-linguist-language=Verilog
+*.vhd linguist-vendored
