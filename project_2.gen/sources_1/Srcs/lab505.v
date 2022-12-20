@@ -82,11 +82,8 @@ module lab505(CLOCK_20);
                       (Branch &  zero  & BNE)  ? PC_plus   : 
                       (JALR) ? (rd1_w + immgenout)  :
                       PC_plus;
-      assign to_branch = q1[12] ^ zero; //DAFQ IS THIS
-      //assign PC_next = ;
-
-
-
+      assign to_branch = q1[12] ^ zero;
+     
    // ================ ALU =================
    // prepare for A and B
    assign A = rd1_w;
