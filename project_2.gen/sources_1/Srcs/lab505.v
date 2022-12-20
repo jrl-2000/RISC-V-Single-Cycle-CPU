@@ -50,7 +50,6 @@ module lab505(CLOCK_20);
    (* DONT_TOUCH = "TRUE" *)wire outclk3;
    // remeber to use your locked signal
    (* DONT_TOUCH = "TRUE" *)wire locked;
-   wire clk_fb;
    
    //imm_gen
    (* DONT_TOUCH = "TRUE" *)wire [31:0]immgenout;
@@ -167,14 +166,15 @@ module lab505(CLOCK_20);
     //in fetch/PC clk1
     //reg_file is clk 3
     //RAM/Data mem is clk2
+    wire clk_fb;
     
     clk_wiz_0 clkWiz(
-        //.clkfb_out (clk_fb)
+        .clkfb_out (clk_fb),
         .clk_out1(outclk1),
         .clk_out2(outclk2),
         .clk_out3(outclk3),
         .reset(0),
         .locked(locked),
-        .clk_in1(CLOCK_20));
-	    //.clkfb_in (clk_fb));   
+        .clk_in1(CLOCK_20),
+	    .clkfb_in (clk_fb));   
 endmodule
